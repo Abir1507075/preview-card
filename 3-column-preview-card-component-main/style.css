@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600&family=Lexend+Deca&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--orange: hsl(31, 77%, 52%);
+	--cyan: hsl(184, 100%, 22%);
+	--dark-cyan: hsl(179, 100%, 13%);
+
+	--trans-white: hsla(0, 0%, 100%, 0.75);
+	--light-grey: hsl(0, 0%, 95%);
+}
+.color-cyan {
+	color: var(--cyan);
+}
+.color-dark-cyan {
+	color: var(--dark-cyan);
+}
+.color-orange {
+	color: var(--orange);
+}
+body {
+	font-family: 'Lexend Deca', sans-serif;
+	font-weight: 400;
+	box-sizing: border-box;
+
+	display: flex;
+	line-height: 1.8;
+	font-size: 1rem;
+	background: var(--light-grey);
+
+	/* color: white; */
+}
+
+.container-wrapper {
+	flex: 1;
+	height: 100%;
+	width: 100%;
+}
+.container {
+	width: 60%;
+	margin: 10% auto 0;
+	display: flex;
+	min-height: 65vh;
+	border-radius: 10px;
+	/* flex-wrap: no-wrap; */
+}
+img {
+	height: 40px;
+	width: 60px;
+}
+h1 {
+	text-transform: uppercase;
+	color: var(--light-grey);
+	font-family: 'Big Shoulders Display', cursive;
+
+	font-weight: 700;
+}
+p {
+	color: var(--trans-white);
+	font-family: 'Lexend Deca', sans-serif;
+	font-weight: 400;
+	font-size: 0.8rem;
+}
+.orange {
+	background: var(--orange);
+	border-radius: 10px 0 0 10px;
+}
+.cyan {
+	background: var(--cyan);
+}
+.green {
+	background: var(--dark-cyan);
+	border-radius: 0 10px 10px 0;
+}
+
+.flex-column {
+	min-height: 400px;
+	max-width: 300px;
+	min-width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.top-card {
+	flex: 4;
+	/* border: 2px solid black; */
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.attribution {
+	visibility: hidden;
+}
+.bottom {
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+button {
+	height: 50px;
+	width: 150px;
+	border: none;
+	border-radius: 40px;
+	background: var(--light-grey);
+	margin-bottom: 20px;
+}
+button a {
+	text-decoration: none;
+	font-family: 'Lexend Deca', sans-serif;
+	font-weight: 400;
+	font: bold;
+}
+button:hover {
+	background: transparent;
+	border: 2px solid var(--light-grey);
+}
+button:hover a {
+	color: var(--light-grey);
+}
+
+@media screen and (max-width: 900px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+	img {
+		margin-bottom: 20px;
+	}
+	.orange {
+		border-radius: 10px 10px 0 0;
+	}
+	.green {
+		border-radius: 0 0 10px 10px;
+	}
+}
